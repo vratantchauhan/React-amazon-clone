@@ -22,6 +22,12 @@ export const reducer = (state, action) => {
                 basket: []
             }
 
+            case 'EMPTY_BASKET':
+                return{
+                    ...state,
+                    basket: []
+                }
+
         case "REMOVE_FROM_BASKET":
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
